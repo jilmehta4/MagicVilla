@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace MagicVilla_VillaAPI.Migrations
+namespace MagicVilla_WebProject.Migrations
 {
     /// <inheritdoc />
     public partial class AddForeignKey : Migration

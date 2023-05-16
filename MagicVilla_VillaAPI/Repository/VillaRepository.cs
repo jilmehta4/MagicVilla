@@ -1,11 +1,11 @@
-﻿using MagicVilla_VillaAPI.Data;
-using MagicVilla_VillaAPI.Models;
-using MagicVilla_VillaAPI.Repository.IRepository;
+﻿using MagicVilla_WebProject.Data;
+using MagicVilla_WebProject.Models;
+using MagicVilla_WebProject.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace MagicVilla_VillaAPI.Repository
+namespace MagicVilla_WebProject.Repository
 {
     public class VillaRepository : Repository<Villa>, IVillaRepository
     {

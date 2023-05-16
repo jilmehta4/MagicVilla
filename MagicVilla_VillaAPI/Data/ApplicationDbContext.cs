@@ -1,7 +1,7 @@
-﻿using MagicVilla_VillaAPI.Models;
+﻿using MagicVilla_WebProject.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace MagicVilla_VillaAPI.Data
+namespace MagicVilla_WebProject.Data
 {
     public class ApplicationDbContext : DbContext
     {

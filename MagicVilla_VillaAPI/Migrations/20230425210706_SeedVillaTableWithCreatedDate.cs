@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace MagicVilla_VillaAPI.Migrations
+namespace MagicVilla_WebProject.Migrations
 {
     /// <inheritdoc />
     public partial class SeedVillaTableWithCreatedDate : Migration

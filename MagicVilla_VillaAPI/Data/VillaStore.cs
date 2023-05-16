@@ -1,6 +1,6 @@
-﻿using MagicVilla_VillaAPI.Models.DTO;
+﻿using MagicVilla_WebProject.Models.DTO;
 
-namespace MagicVilla_VillaAPI.Data
+namespace MagicVilla_WebProject.Data
 {
     public static class VillaStore
     {
