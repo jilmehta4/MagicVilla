@@ -11,7 +11,7 @@ namespace MagicVilla_WebProject.Models
         [ForeignKey("Villa")]
         public int VillaId { get; set; }
 
-        public Villa Villa { get; set; }
+        public virtual Villa Villa { get; set; }
 
         public string SpecialDetails { get; set; }
 

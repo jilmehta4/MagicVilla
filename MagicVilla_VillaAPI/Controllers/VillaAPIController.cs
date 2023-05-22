@@ -86,7 +86,7 @@ namespace MagicVilla_WebProject.Controllers
             {
                 if (await _dbVilla.GetAsync(u => u.Name.ToLower() == createDTO.Name.ToLower()) != null)
                 {
-                    ModelState.AddModelError("Name Error", "Name can not be duplicate");
+                    ModelState.AddModelError("ErrorMessages", "Name can not be duplicate");
                     return BadRequest(ModelState);
                 }
                 if (createDTO == null)

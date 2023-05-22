@@ -9,7 +9,6 @@ namespace MagicVilla_WebProject.Services
     public class BaseService : IBaseService
     {
         public APIResponse responseModel { get; set; }
-
         public IHttpClientFactory httpClient { get; set; }
 
         public BaseService(IHttpClientFactory httpClient)
@@ -53,8 +52,27 @@ namespace MagicVilla_WebProject.Services
                 apiResponse= await client.SendAsync(message); 
 
                 var apiContent = await apiResponse.Content.ReadAsStringAsync();
+                try
+                {
+                    APIResponse APIResponse = JsonConvert.DeserializeObject<APIResponse>(apiContent);
+                    if(apiResponse.StatusCode==System.Net.HttpStatusCode.BadRequest || apiResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+                    {
+                        APIResponse.StatusCode = System.Net.HttpStatusCode.BadRequest;
+                        APIResponse.IsSuccess = false;
+                        var res = JsonConvert.SerializeObject(APIResponse);
+                        var returnObj = JsonConvert.DeserializeObject<T>(res);
+                        return returnObj;
+                    } 
+                }
+                catch(Exception ex)
+                {
+                    var exceptionResponse = JsonConvert.DeserializeObject<T>(apiContent);
+                    return exceptionResponse;
+                }
                 var APIResponse = JsonConvert.DeserializeObject<T>(apiContent);
                 return APIResponse;
+
+
             }
             catch (Exception ex)
             {

@@ -22,7 +22,7 @@ namespace MagicVilla_WebProject.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("MagicVilla_VillaAPI.Models.Villa", b =>
+            modelBuilder.Entity("MagicVilla_WebProject.Models.Villa", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -31,22 +31,18 @@ namespace MagicVilla_WebProject.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Amenity")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Details")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Occupancy")
@@ -70,7 +66,7 @@ namespace MagicVilla_WebProject.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 4, 27, 12, 31, 19, 655, DateTimeKind.Local).AddTicks(2767),
+                            CreatedDate = new DateTime(2023, 5, 21, 13, 14, 43, 762, DateTimeKind.Local).AddTicks(85),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa3.jpg",
                             Name = "Royal Villa",
@@ -83,7 +79,7 @@ namespace MagicVilla_WebProject.Migrations
                         {
                             Id = 2,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 4, 27, 12, 31, 19, 655, DateTimeKind.Local).AddTicks(2818),
+                            CreatedDate = new DateTime(2023, 5, 21, 13, 14, 43, 762, DateTimeKind.Local).AddTicks(136),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa1.jpg",
                             Name = "Premium Pool Villa",
@@ -96,7 +92,7 @@ namespace MagicVilla_WebProject.Migrations
                         {
                             Id = 3,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 4, 27, 12, 31, 19, 655, DateTimeKind.Local).AddTicks(2822),
+                            CreatedDate = new DateTime(2023, 5, 21, 13, 14, 43, 762, DateTimeKind.Local).AddTicks(141),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa4.jpg",
                             Name = "Luxury Pool Villa",
@@ -109,7 +105,7 @@ namespace MagicVilla_WebProject.Migrations
                         {
                             Id = 4,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 4, 27, 12, 31, 19, 655, DateTimeKind.Local).AddTicks(2825),
+                            CreatedDate = new DateTime(2023, 5, 21, 13, 14, 43, 762, DateTimeKind.Local).AddTicks(146),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa5.jpg",
                             Name = "Diamond Villa",
@@ -122,7 +118,7 @@ namespace MagicVilla_WebProject.Migrations
                         {
                             Id = 5,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 4, 27, 12, 31, 19, 655, DateTimeKind.Local).AddTicks(2828),
+                            CreatedDate = new DateTime(2023, 5, 21, 13, 14, 43, 762, DateTimeKind.Local).AddTicks(150),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa2.jpg",
                             Name = "Diamond Pool Villa",
@@ -133,7 +129,7 @@ namespace MagicVilla_WebProject.Migrations
                         });
                 });
 
-            modelBuilder.Entity("MagicVilla_VillaAPI.Models.VillaNumber", b =>
+            modelBuilder.Entity("MagicVilla_WebProject.Models.VillaNumber", b =>
                 {
                     b.Property<int>("VillaNo")
                         .HasColumnType("int");
@@ -142,7 +138,6 @@ namespace MagicVilla_WebProject.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("SpecialDetails")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedDate")
@@ -158,9 +153,9 @@ namespace MagicVilla_WebProject.Migrations
                     b.ToTable("VillaNumbers");
                 });
 
-            modelBuilder.Entity("MagicVilla_VillaAPI.Models.VillaNumber", b =>
+            modelBuilder.Entity("MagicVilla_WebProject.Models.VillaNumber", b =>
                 {
-                    b.HasOne("MagicVilla_VillaAPI.Models.Villa", "Villa")
+                    b.HasOne("MagicVilla_WebProject.Models.Villa", "Villa")
                         .WithMany()
                         .HasForeignKey("VillaId")
                         .OnDelete(DeleteBehavior.Cascade)

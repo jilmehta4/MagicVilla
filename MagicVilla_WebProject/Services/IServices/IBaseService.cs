@@ -7,7 +7,6 @@ namespace MagicVilla_WebProject.Services.IServices
         APIResponse responseModel { get; set; }
 
         Task<T> SendAsync<T>(APIRequest apiRequest);
-
-
+    
     }
 }

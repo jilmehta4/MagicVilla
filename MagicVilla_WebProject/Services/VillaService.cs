@@ -1,13 +1,18 @@
-﻿using MagicVilla_WebProject.Models.DTO;
+﻿using MagicVilla_Utility;
+using MagicVilla_WebProject.Models;
+using MagicVilla_WebProject.Models.DTO;
 using MagicVilla_WebProject.Services.IServices;
+using static MagicVilla_Utility.SD;
+using System;
 
 namespace MagicVilla_WebProject.Services
 {
     public class VillaService : BaseService, IVillaService
     {
         private readonly IHttpClientFactory _httpClientFactory;
+        private string villaUrl;
 
-        public VillaService(IHttpClientFactory httpClientFactory) : base(httpClientFactory)
+        public VillaService(IHttpClientFactory httpClientFactory, IConfiguration configuration) : base(httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
             villaUrl = configuration.GetValue<string>("ServiceUrls:VillaAPI"); 
@@ -15,27 +20,50 @@ namespace MagicVilla_WebProject.Services
 
         public Task<T> CreateAsync<T>(VillaCreateDTO dto)
         {
-            throw new NotImplementedException();
+            return SendAsync<T>(new APIRequest()
+            {
+                ApiType = SD.ApiType.POST,
+                Data = dto,
+                Url = villaUrl + "/api/villaAPI"
+            });
         }
 
         public Task<T> DeleteAsync<T>(int id)
         {
-            throw new NotImplementedException();
+            return SendAsync<T>(new APIRequest()
+            {
+                ApiType = SD.ApiType.DELETE,
+                Url = villaUrl + "/api/villaAPI/"+id
+            });
         }
 
         public Task<T> GetAllAsync<T>()
         {
-            throw new NotImplementedException();
+            return SendAsync<T>(new APIRequest()
+            {
+                ApiType = SD.ApiType.GET,
+                Url = villaUrl + "/api/villaAPI"
+            });
         }
 
         public Task<T> GetAsync<T>(int id)
         {
-            throw new NotImplementedException();
+            return SendAsync<T>(new APIRequest()
+            {
+                ApiType = SD.ApiType.GET,
+                Url = villaUrl + "/api/villaAPI/" + id
+            });
+            
         }
 
         public Task<T> UpdateAsync<T>(VillaUpdateDTO dto)
         {
-            throw new NotImplementedException();
+            return SendAsync<T>(new APIRequest()
+            {
+                ApiType = SD.ApiType.PUT,
+                Data = dto,
+                Url = villaUrl + "/api/villaAPI/" + dto.Id
+            });
         }
     }
 }

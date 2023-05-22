@@ -1,0 +1,12 @@
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\bin\Debug\net7.0\MagicVilla_Utility.deps.json
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\bin\Debug\net7.0\MagicVilla_Utility.dll
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\bin\Debug\net7.0\MagicVilla_Utility.pdb
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\obj\Debug\net7.0\MagicVilla_Utility.csproj.AssemblyReference.cache
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\obj\Debug\net7.0\MagicVilla_Utility.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\obj\Debug\net7.0\MagicVilla_Utility.AssemblyInfoInputs.cache
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\obj\Debug\net7.0\MagicVilla_Utility.AssemblyInfo.cs
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\obj\Debug\net7.0\MagicVilla_Utility.csproj.CoreCompileInputs.cache
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\obj\Debug\net7.0\MagicVilla_Utility.dll
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\obj\Debug\net7.0\refint\MagicVilla_Utility.dll
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\obj\Debug\net7.0\MagicVilla_Utility.pdb
+D:\ASP.NET Core\LinkedIn\MagicVilla\MagicVilla_Utility\obj\Debug\net7.0\ref\MagicVilla_Utility.dll
